@@ -18,7 +18,7 @@ class BTKSorgu:
         self.oturum.headers.update({
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         })
-        pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+        pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract' 
 
     def _temizle_url(self, url: str) -> str:
         return re.search(r"(?:https?://)?(?:www\.)?([^/]+)", url).group(1)
